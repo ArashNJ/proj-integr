@@ -1,0 +1,24 @@
+<h2>Processes</h2>
+<div *ngFor="let process of processes">
+<h3>
+<a [title]="process.name + ' details'">
+{{ process.name }}
+</a>
+</h3>
+<p *ngIf="process.description">
+Description: {{ process.description }}
+</p>
+<button (click)="migrate()">
+Migrate to Excel
+</button>
+</div>
+
+<a class="button fancy-button">View Excel Sheet</a>
+<a class="button fancy-button">Convert Data Type</a>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
